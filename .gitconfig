@@ -1,0 +1,23 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[user]
+	name = Damien Mayance
+	email = apps@mayance.io
+
+[alias]
+	co = checkout
+	st = status
+	mt = mergetool
+
+[core]
+	editor = nano
+  
+[push]
+  default = simple
+
+[pull]
+  rebase = preserve
