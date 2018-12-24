@@ -3,21 +3,22 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
 [user]
 	name = Damien Mayance
 	email = apps@mayance.io
-
 [alias]
 	co = checkout
 	st = status
+	nuke = !git checkout -- \\* && git clean -fd
+	sync = !git pull --rebase=preserve && git push && echo '' && git log --oneline --decorate --max-count=3
 	mt = mergetool
-
+[merge]
+	tool = p4merge_win
+[mergetool "p4merge_win"]
+	path = C:/Program Files/Perforce/p4merge.exe
+[mergetool "p4merge_macOS"]
+	path = /Applications/Dev/p4merge.app
+[pull]
+	rebase = true
 [core]
 	editor = nano
-  
-[push]
-  default = simple
-
-[pull]
-  rebase = preserve
