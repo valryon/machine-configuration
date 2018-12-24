@@ -13,7 +13,7 @@
 	sync = !git pull --rebase=preserve && git push && echo '' && git log --oneline --decorate --max-count=3
 	mt = mergetool
 [merge]
-	tool = p4merge_win
+	tool = p4merge
 [mergetool "p4merge_win"]
 	path = C:/Program Files/Perforce/p4merge.exe
 [mergetool "p4merge_macOS"]
