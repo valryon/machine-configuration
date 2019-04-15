@@ -17,7 +17,22 @@
 [mergetool "p4merge_win"]
 	path = C:/Program Files/Perforce/p4merge.exe
 [mergetool "p4merge_macOS"]
-	path = /Applications/Dev/p4merge.app
+	cmd = /Applications/Dev/p4merge.app/Contents/MacOS/p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+        keepBackup = false
+        keepTemporaries = false
+        trustExitCode = false
+        prompt = false
+[diff]
+        tool = p4merge
+        renames = copies
+        mnemonicprefix = true
+[difftool "p4merge"]
+        cmd = /Applications/Dev/p4merge.app/Contents/MacOS/p4merge "$LOCAL" "$REMOTE"
+        keepBackup = false
+        keepTemporaries = false
+        trustExitCode = false
+        prompt = false
+	
 [pull]
 	rebase = true
 [core]
