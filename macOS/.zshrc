@@ -97,3 +97,25 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Custom configuration
+# secure file management
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# ls
+alias la='ls -a'
+alias ll='ls -lia'
+alias lla='ls -1a'
+
+# PATH
+export PATH=/bin
+export PATH=/sbin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/usr/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+# Editor
+export EDITOR=nano
